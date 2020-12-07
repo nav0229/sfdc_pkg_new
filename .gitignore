@@ -1,0 +1,34 @@
+*-debug.log
+*-error.log
+/.nyc_output
+/dist
+/tmp
+
+# We need to include the oclif.manifest.json file - otherwise the sfdx plugins:install command doesn't work
+# https://salesforce.stackexchange.com/questions/313052/sfdx-how-can-i-make-my-plugin-available-to-install-via-sfdx-pluginsinstall-and
+# /oclif.manifest.json
+
+node_modules
+*.tmp
+    
+test/**/package-a.xml
+test/**/package-b.xml
+xml-merge.log
+_tmp/**
+
+package*.xml
+package-options.json
+*Options.json
+~$*.*
+
+**/test/force-app
+**/test/deploy
+**/test/source_folder
+**/test/destination_folder
+!**/test/lib/merge/package*.xml
+**/test/*.test.txt
+**/delta.log
+
+force-app/
+
+.sfdx
